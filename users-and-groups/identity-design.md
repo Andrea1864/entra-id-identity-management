@@ -27,3 +27,50 @@ least privilege.
 ## Identity Lifecycle Management
 
 ### Joiner Process (New Employee)
+HR notifies IT of new hire
+↓
+IT creates user account in Entra ID
+↓
+User added to relevant security group
+↓
+Minimum role assigned (least privilege)
+↓
+Welcome email with temporary password
+↓
+User sets permanent password on first login
+↓
+MFA enrollment within 24 hours
+
+
+### Mover Process (Role Change)
+
+Manager requests role change
+↓
+Old group membership removed
+↓
+New group membership added
+↓
+Access review confirms correct permissions
+↓
+Change documented in audit log
+
+
+### Leaver Process (Employee Departure)
+
+HR notifies IT of departure
+↓
+Account disabled immediately
+↓
+Active sessions revoked
+↓
+Data preserved per retention policy
+↓
+Account deleted after 30 days
+↓
+GDPR Art. 17 erasure request if applicable
+
+
+## GDPR Connection
+- **Art. 25** — Privacy by Design: minimum access by default
+- **Art. 32** — Security: unique accounts, no shared credentials
+- **Art. 5(1)(f)** — Integrity: access controls protect personal data
